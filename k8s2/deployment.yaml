@@ -17,4 +17,4 @@ spec:
       - name: app-container
         image: yashmane108/devopssssss-app:30
         ports:
-        - containerPort: 80
+        - containerPort: 3000
