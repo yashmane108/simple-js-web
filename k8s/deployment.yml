@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: simple-deployment
+  namespace: simple-ns
+  labels: 
+    app: my-app
+
+spec: 
+  replicas: 1 
+  selector:
+    matchLabels:
+      app: my-app
+
+  template:
+    metadata:
+      name: simple-pod
+      namespace: simple-ns
+      labels:
+        app: my-app
+    spec:
+      containers:
+      - name: simple-pod
+        image: yashmane108/devopssssss-app:30
+        ports:
+        - containerPort: 80

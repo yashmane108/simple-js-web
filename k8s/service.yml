@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+
+metadata:
+  name: simple-svc
+  namespace: simple-ns
+
+spec:
+  selector:
+    app: my-app
+  ports:      
+    - protocol: TCP
+      port: 82
+      targetPort: 80
